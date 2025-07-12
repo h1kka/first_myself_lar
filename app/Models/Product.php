@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 
-class Product extends Model
+class Product extends EloquentModel
 {
     /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory;
