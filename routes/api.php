@@ -1,9 +1,14 @@
 <?php
 
-use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\ProductDeleteController;
+use App\Http\Controllers\Api\ProductReadController;
+use App\Http\Controllers\Api\ProductCreateController;
+use App\Http\Controllers\Api\ProductUpdateController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/products', ProductController::class);
-Route::post('/products/handle', ProductController::class);
-Route::put('/products/update', ProductController::class);
-Route::delete('/products/delete', ProductController::class);
+Route::get('/products', ProductReadController::class);
+Route::post('/products/create', ProductCreateController::class);
+Route::put('/products/update/{id}', ProductUpdateController::class);
+Route::delete('/products/delete/{id}', ProductDeleteController::class);
+
+
